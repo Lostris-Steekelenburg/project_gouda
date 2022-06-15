@@ -21,7 +21,6 @@ function App() {
         <h1 className='content_h1'>hierin staat welke plek het is</h1>
         <div className='container'>
         <p className='content_p'>Informatie over het punt</p>
-        {/* <img className='content_img' src={Groen}></img> */}
         </div>
       </>}
       handleClose={togglePopup}
