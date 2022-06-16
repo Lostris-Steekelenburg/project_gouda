@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/project_gouda/precache-manifest.92fed7b4861e01755d2431641310db58.js"
+  "/project_gouda/precache-manifest.47514369f0a4031a8dc534deff092ac4.js"
 );
 
 workbox.clientsClaim();

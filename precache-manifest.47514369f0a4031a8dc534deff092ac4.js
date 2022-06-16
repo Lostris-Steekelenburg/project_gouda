@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c4f2f7f37d9f9d849276",
-    "url": "/project_gouda/static/css/main.3b09ea38.chunk.css"
+    "revision": "7814c773f97be4044a3b",
+    "url": "/project_gouda/static/css/main.55f89a28.chunk.css"
   },
   {
-    "revision": "c4f2f7f37d9f9d849276",
-    "url": "/project_gouda/static/js/main.c4f2f7f3.chunk.js"
+    "revision": "7814c773f97be4044a3b",
+    "url": "/project_gouda/static/js/main.7814c773.chunk.js"
   },
   {
     "revision": "07c9f322fb10ec45539d",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/project_gouda/static/js/runtime~main.104b9884.js"
   },
   {
-    "revision": "1fad4c1ace3b97324c9133da1d155d11",
+    "revision": "7ae0e0271d115b735c88e304aa31e5bc",
     "url": "/project_gouda/index.html"
   }
 ];
