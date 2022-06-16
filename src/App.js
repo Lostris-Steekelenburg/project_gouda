@@ -11,7 +11,7 @@ function App() {
   }
 
   return <div>
-    <input
+    <input className="input_image_button"
       type="image"
       src={Groen}
       onClick={togglePopup}
