@@ -1,7 +1,10 @@
 import "./App.css";
 import React, { useState } from 'react';
 import Popup from './Popup';
+import Map from './Map';
 import Groen from './img/markerGroen.png';
+// import "leaflet/dist/leaflet.css";
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,22 +13,23 @@ function App() {
     setIsOpen(!isOpen);
   }
 
-  return <div>
-    <input
-      type="image"
-      src={Groen}
-      onClick={togglePopup}
-    />
-    {isOpen && <Popup
-      content={<>
-        <h1 className='content_h1'>hierin staat welke plek het is</h1>
-        <div className='container'>
-        <p className='content_p'>Informatie over het punt</p>
-        </div>
-      </>}
-      handleClose={togglePopup}
-    />}
-  </div>
+  return <div className="contentContainer">
+    {/*<input*/}
+    {/*    type="image"*/}
+    {/*    src={Groen}*/}
+    {/*    onClick={togglePopup}*/}
+    {/*/>*/}
+    {/*{isOpen && <Popup*/}
+    {/*    content={<>*/}
+    {/*      <h1 className='content_h1'>hierin staat welke plek het is</h1>*/}
+    {/*      <div className='container'>*/}
+    {/*        <p className='content_p'>Informatie over het punt</p>*/}
+    {/*      </div>*/}
+    {/*    </>}*/}
+    {/*    handleClose={togglePopup}*/}
+    {/*/>};*/}
+        <Map />
+      </div>
 }
 
 export default App;
