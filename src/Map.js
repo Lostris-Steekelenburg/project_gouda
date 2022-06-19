@@ -17,8 +17,9 @@ class myMap extends Component{
     state = {};
 
     style_WrGroen = {
-            color: "#6BB536",
-            weight: 3
+        color: "#6BB536",
+        weight: 5,
+        opacity: 0.8
     };
 
     // L.geoJSON(WrGroen,{
