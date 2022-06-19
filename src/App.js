@@ -14,20 +14,20 @@ function App() {
   }
 
   return <div className="contentContainer">
-    {/*<input*/}
-    {/*    type="image"*/}
-    {/*    src={Groen}*/}
-    {/*    onClick={togglePopup}*/}
-    {/*/>*/}
-    {/*{isOpen && <Popup*/}
-    {/*    content={<>*/}
-    {/*      <h1 className='content_h1'>hierin staat welke plek het is</h1>*/}
-    {/*      <div className='container'>*/}
-    {/*        <p className='content_p'>Informatie over het punt</p>*/}
-    {/*      </div>*/}
-    {/*    </>}*/}
-    {/*    handleClose={togglePopup}*/}
-    {/*/>};*/}
+    <input
+        type="image"
+        src={Groen}
+        onClick={togglePopup}
+    />
+    {isOpen && <Popup
+        content={<>
+          <h1 className='content_h1'>hierin staat welke plek het is</h1>
+          <div className='container'>
+            <p className='content_p'>Informatie over het punt</p>
+          </div>
+        </>}
+        handleClose={togglePopup}
+    />};
         <Map />
       </div>
 }
