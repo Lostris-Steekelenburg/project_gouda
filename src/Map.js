@@ -42,10 +42,19 @@ class myMap extends Component{
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 foreach
-                <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features} />
+                <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features}>
+                    onEachFeature: function (feature, layer){
+                <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+                }
+                    
+                </GeoJSON>
+
             </Map>
         );
     }
 }
+
 
 export default myMap;

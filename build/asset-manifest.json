@@ -1,13 +1,13 @@
 {
-  "main.css": "/project_gouda/static/css/main.3b09ea38.chunk.css",
-  "main.js": "/project_gouda/static/js/main.c4f2f7f3.chunk.js",
-  "main.js.map": "/project_gouda/static/js/main.c4f2f7f3.chunk.js.map",
-  "static/js/1.07c9f322.chunk.js": "/project_gouda/static/js/1.07c9f322.chunk.js",
-  "static/js/1.07c9f322.chunk.js.map": "/project_gouda/static/js/1.07c9f322.chunk.js.map",
-  "runtime~main.js": "/project_gouda/static/js/runtime~main.104b9884.js",
-  "runtime~main.js.map": "/project_gouda/static/js/runtime~main.104b9884.js.map",
-  "static/css/main.3b09ea38.chunk.css.map": "/project_gouda/static/css/main.3b09ea38.chunk.css.map",
-  "index.html": "/project_gouda/index.html",
-  "precache-manifest.92fed7b4861e01755d2431641310db58.js": "/project_gouda/precache-manifest.92fed7b4861e01755d2431641310db58.js",
-  "service-worker.js": "/project_gouda/service-worker.js"
+  "files": {
+    "main.css": "/project_gouda/static/css/main.04026b75.css",
+    "main.js": "/project_gouda/static/js/main.9a7eb5c2.js",
+    "index.html": "/project_gouda/index.html",
+    "main.04026b75.css.map": "/project_gouda/static/css/main.04026b75.css.map",
+    "main.9a7eb5c2.js.map": "/project_gouda/static/js/main.9a7eb5c2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04026b75.css",
+    "static/js/main.9a7eb5c2.js"
+  ]
 }
