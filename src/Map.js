@@ -30,17 +30,6 @@ class myMap extends Component{
         opacity: 0.8
     };
 
-    // L.geoJSON(WrGroen,{
-    //     style: function(feature){
-    //         return{
-    //             color: "#6BB536",
-    //             weight: 3
-    //         }
-    //     },
-    //     pointToLayer: function(feature, latlng) {
-    //         return L.marker(latlng, {icon: iconGroen});
-    //     },
-    // });
     pointToLayer = (feature, latlng) => {
         return L.marker(latlng, {
             icon: greenIcon
@@ -50,7 +39,7 @@ class myMap extends Component{
 
     render(){
         return(
-            <Map className="map" center={[52.0115205, 4.7104633]} zoom={15} scrollWheelZoom={true}>
+            <Map className="map" center={[52.0155205, 4.7104633]} zoom={15} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.maptiler.com/copyright/"">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -62,7 +51,6 @@ class myMap extends Component{
                         </Popup>
                     }
                 </GeoJSON>
-
             </Map>
         );
     }
