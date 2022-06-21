@@ -3,7 +3,6 @@ import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import WrGroen from "./data/Wandelroute_Groen.json"
 import L, { icon } from 'leaflet'
-import iconGroen from './img/markerGroen.png'
 
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -14,12 +13,13 @@ L.Icon.Default.mergeOptions({
 });
 
 var greenIcon = L.icon({
-    iconUrl: require('./img/markerGroen.png'),
+    iconUrl: require('./img/marker-groen.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-    iconSize: [35,35],
-    shadowAnchor: [15, 20],
+    iconSize: [25,41],
+    iconAnchor: [10, 41],
+    shadowSize:[50, 60],
+    shadowAnchor: [10, 65],
 });
-
 
 class myMap extends Component{
     state = {};
@@ -47,7 +47,6 @@ class myMap extends Component{
         });
         }
 
-    
 
     render(){
         return(
@@ -58,13 +57,10 @@ class myMap extends Component{
                 />
                 <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features} pointToLayer={this.pointToLayer.bind(this)}>
                     onEachFeature: function (feature, layer){
-                <Popup>
-                    <p>Informatie over dit punt</p>
-                </Popup>
-            }
-
-
-                    
+                        <Popup>
+                            <p>Informatie over dit punt</p>
+                        </Popup>
+                    }
                 </GeoJSON>
 
             </Map>
