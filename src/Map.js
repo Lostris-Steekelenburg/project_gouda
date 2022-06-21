@@ -30,17 +30,6 @@ class myMap extends Component{
         opacity: 0.8
     };
 
-    // L.geoJSON(WrGroen,{
-    //     style: function(feature){
-    //         return{
-    //             color: "#6BB536",
-    //             weight: 3
-    //         }
-    //     },
-    //     pointToLayer: function(feature, latlng) {
-    //         return L.marker(latlng, {icon: iconGroen});
-    //     },
-    // });
     pointToLayer = (feature, latlng) => {
         return L.marker(latlng, {
             icon: greenIcon
@@ -58,15 +47,11 @@ class myMap extends Component{
                 />
                 <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features} pointToLayer={this.pointToLayer.bind(this)}>
                     onEachFeature: function (feature, layer){
-                <Popup>
-                    <p>Informatie over dit punt</p>
-                </Popup>
-            }
-
-
-                    
+                    <Popup>
+                        <p>Informatie over dit punt</p>
+                    </Popup>
+                }
                 </GeoJSON>
-
             </Map>
         );
     }
