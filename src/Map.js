@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import WrGroen from "./data/Wandelroute_Groen.json"
@@ -12,7 +12,9 @@ L.Icon.Default.mergeOptions({
    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
 
-var greenIcon = L.icon({
+// console.log(WrGroen.features.properties)
+
+let greenIcon = L.icon({
     iconUrl: require('./img/marker-groen.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
     iconSize: [25,41],
@@ -21,13 +23,65 @@ var greenIcon = L.icon({
     shadowAnchor: [12, 65],
 });
 
-const baseUrl = "http://206.189.105.69/route/green";
+const baseUrl = "http://206.189.105.69/route/";
 
-fetch(baseUrl,{
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err.message));
+// async function getRouteGroen(){
+//     const response = await fetch(baseUrl + "green");
+//     const data = await response.json();
+//     const FeatureCollection = JSON.parse(data.geo_data);
+//     const features = FeatureCollection.features;
+//     for(let i=0; i<features.length; i++){
+//         console.log(features[i].geometry.type);
+//         if(features[i].geometry.type === "Point"){
+//             return(
+//                 <Marker location={features[i].geometry.coordinates}>
+//                     <Popup>
+//                         <h1>{features[i].properties.name}</h1>
+//                         <p>{features[i].properties.location}</p>
+//                     </Popup>
+//                 </Marker>
+//             )
+//         }else{
+//             return("geen Point"
+//             )
+//         }
+//
+//     }
+    // console.log(FeatureCollection.features);
+// }
+
+// const response = fetch(baseUrl + "yellow");
+// const data = response.json();
+// const FeatureCollection = JSON.parse(data.geo_data);
+// const features = FeatureCollection.features;
+//
+// console.log(features);
+
+
+// console.log(WrGroen)
+
+// const WrGeel =
+//     console.log(getRouteGeel())
+
+// const groen =
+//     fetch(baseUrl + "green")
+//         .then
+//         (
+//             response => response.json()
+//         ).then(
+//             data =>
+//         )
+    // .then(
+    //         FeatureCollection => FeatureCollection.features
+    //     ).then(
+    //         content => return("test")
+    // );
+
+// const data = await response.json();
+// const FeatureCollection = JSON.parse(data.geo_data);
+// const features = FeatureCollection.features;
+
+console.log(WrGroen)
 
 class myMap extends Component{
     state = {};
@@ -51,13 +105,18 @@ class myMap extends Component{
                     attribution='&copy; <a href="https://www.maptiler.com/copyright/"">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <GeoJSON className="WrGroen" style={this.style_WrGroen} data={WrGroen.features} pointToLayer={this.pointToLayer.bind(this)}>
+                <GeoJSON className="WrGroen" style={this.style_WrGroen} data={routeGroen} pointToLayer={this.pointToLayer.bind(this)}>
                     onEachFeature: function (feature, layer){
-                        <Popup>
-                            <p>Informatie over dit punt</p>
-                        </Popup>
+
+                    <Popup>
+                        {/*<h1>{feature.properties.name}</h1>*/}
+                        {/*<p>{feature.properties.location}</p>*/}
+                        <p>test</p>
+                        {/*{console.log(WrGroen.features.properties.name)}*/}
+                    </Popup>
                     }
                 </GeoJSON>
+                {/*{getRouteGroen()}*/}
             </Map>
         );
     }
