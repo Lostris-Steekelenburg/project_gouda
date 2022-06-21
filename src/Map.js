@@ -21,6 +21,14 @@ var greenIcon = L.icon({
     shadowAnchor: [12, 65],
 });
 
+const baseUrl = "http://206.189.105.69/route/green";
+
+fetch(baseUrl,{
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err.message));
+
 class myMap extends Component{
     state = {};
 
@@ -34,7 +42,7 @@ class myMap extends Component{
         return L.marker(latlng, {
             icon: greenIcon
         });
-        }
+        };
 
     render(){
         return(
@@ -43,7 +51,7 @@ class myMap extends Component{
                     attribution='&copy; <a href="https://www.maptiler.com/copyright/"">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features} pointToLayer={this.pointToLayer.bind(this)}>
+                <GeoJSON className="WrGroen" style={this.style_WrGroen} data={WrGroen.features} pointToLayer={this.pointToLayer.bind(this)}>
                     onEachFeature: function (feature, layer){
                         <Popup>
                             <p>Informatie over dit punt</p>
