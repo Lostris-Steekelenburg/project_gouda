@@ -1,8 +1,6 @@
 import "./App.css";
-import React, { useState } from 'react';
+import React from 'react';
 import Map from './Map';
-import Groen from './img/markerGroen.png';
-// import "leaflet/dist/leaflet.css";
 
 
 function App() {
