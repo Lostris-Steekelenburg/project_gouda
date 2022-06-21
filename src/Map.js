@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import WrGroen from "./data/Wandelroute_Groen.json"
-import L from 'leaflet'
+import L, { icon } from 'leaflet'
 import iconGroen from './img/markerGroen.png'
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -13,11 +13,19 @@ L.Icon.Default.mergeOptions({
    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
 
+var greenIcon = L.icon({
+    iconUrl: require('./img/markerGroen.png'),
+    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+    iconSize: [35,35],
+    shadowAnchor: [15, 20],
+});
+
+
 class myMap extends Component{
     state = {};
 
     style_WrGroen = {
-        color: "#6BB536",
+        color: "#599130",
         weight: 5,
         opacity: 0.8
     };
@@ -33,6 +41,13 @@ class myMap extends Component{
     //         return L.marker(latlng, {icon: iconGroen});
     //     },
     // });
+    pointToLayer = (feature, latlng) => {
+        return L.marker(latlng, {
+            icon: greenIcon
+        });
+        }
+
+    
 
     render(){
         return(
@@ -41,13 +56,14 @@ class myMap extends Component{
                     attribution='&copy; <a href="https://www.maptiler.com/copyright/"">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                foreach
-                <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features}>
+                <GeoJSON className="WrGroen" style={this.style_WrGroen}data={WrGroen.features} pointToLayer={this.pointToLayer.bind(this)}>
                     onEachFeature: function (feature, layer){
                 <Popup>
-                    <p>A pretty CSS3 popup. <br /> Easily customizable.</p>
+                    <p>Informatie over dit punt</p>
                 </Popup>
-                }
+            }
+
+
                     
                 </GeoJSON>
 
