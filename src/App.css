@@ -31,3 +31,22 @@ body{
   width: 100vw;
   height: 90vh;
 }
+
+.contentContainer__header{
+  height: 7vh;
+  background-color: #c70000;
+}
+
+.contentContainer__header__h1{
+  size: 3rem;
+  padding: 1.5rem;
+  color: #f2f0eb;
+}
+
+.contentContainer__footer{
+  height: 3vh;
+  background-color: #c70000;
+  color: #f2f0eb;
+  text-align: center;
+  padding: 0.5rem;
+}
