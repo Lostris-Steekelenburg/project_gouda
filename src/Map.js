@@ -16,9 +16,9 @@ var greenIcon = L.icon({
     iconUrl: require('./img/marker-groen.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
     iconSize: [25,41],
-    iconAnchor: [10, 41],
+    iconAnchor: [12, 41],
     shadowSize:[50, 60],
-    shadowAnchor: [10, 65],
+    shadowAnchor: [12, 65],
 });
 
 class myMap extends Component{
@@ -35,7 +35,6 @@ class myMap extends Component{
             icon: greenIcon
         });
         }
-
 
     render(){
         return(
