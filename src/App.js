@@ -14,26 +14,25 @@ class App extends Component {
       <div className="contentContainer">
       <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Gouda in Beeld & Gedicht</h1></header>
       <section className = "button__section">
-        <a href="/project_gouda/alleRoutes">
+        <a href="./alleRoutes">
           <button className='button__alle'>Alle</button>
         </a>
-        <a href="/project_gouda/groeneRoute">
+        <a href="./groeneRoute">
           <button className='button button__groen'>Groen</button>
         </a>
-        <a href="/project_gouda/geleRoute">
+        <a href="./geleRoute">
           <button className='button__geel'>Geel</button>
         </a>
-        <a href="/project_gouda/rodeRoute">
+        <a href="./rodeRoute">
           <button className='button__rood'>Rood</button>
         </a>
-        <a href="/project_gouda/blauweRoute">
+        <a href="./blauweRoute">
           <button className='button__blauw'>Blauw</button>
         </a>
       </section>
       </div>
           <hr />
           <Switch>
-              <Route path='/' component={alleRoutes} />
               <Route path='/project_gouda/alleRoutes' component={alleRoutes} />
               <Route path='/project_gouda/groeneRoute' component={GroeneRoute} />
               <Route path='/project_gouda/geleRoute' component={GeleRoute} />
