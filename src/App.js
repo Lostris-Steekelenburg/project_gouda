@@ -33,7 +33,7 @@ class App extends Component {
       </div>
           <hr />
           <Switch>
-              <Route path='/project_gouda' component={alleRoutes} />
+              <Route path='/' component={alleRoutes} />
               <Route path='/project_gouda/alleRoutes' component={alleRoutes} />
               <Route path='/project_gouda/groeneRoute' component={GroeneRoute} />
               <Route path='/project_gouda/geleRoute' component={GeleRoute} />
