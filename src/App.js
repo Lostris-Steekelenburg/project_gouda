@@ -63,19 +63,19 @@ class App extends Component {
       <div className="contentContainer">
       <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Gouda in Beeld & Gedicht</h1></header>
       <section className = "button__section">
-        <a href="./project_gouda">
+        <a href="/project_gouda">
           <button className='button__alle'>Alle</button>
         </a>
-        <a href="./groeneRoute">
+        <a href="/project_gouda/groeneRoute">
           <button className='button button__groen'>Groen</button>
         </a>
-        <a href="./geleRoute">
+        <a href="/project_gouda/geleRoute">
           <button className='button__geel'>Geel</button>
         </a>
-        <a href="./rodeRoute">
+        <a href="/project_gouda/rodeRoute">
           <button className='button__rood'>Rood</button>
         </a>
-        <a href="./blauweRoute">
+        <a href="/project_gouda/blauweRoute">
           <button className='button__blauw'>Blauw</button>
         </a>
       </section>
@@ -83,10 +83,10 @@ class App extends Component {
           <hr />
           <Switch>
               <Route path='/project_gouda' component={alleRoutes} />
-              <Route path='/groeneRoute' component={GroeneRoute} />
-              <Route path='/geleRoute' component={GeleRoute} />
-              <Route path='/rodeRoute' component={RodeRoute} />
-              <Route path='/blauweRoute' component={BlauweRoute} />
+              <Route path='/project_gouda/groeneRoute' component={GroeneRoute} />
+              <Route path='/project_gouda/geleRoute' component={GeleRoute} />
+              <Route path='/project_gouda/rodeRoute' component={RodeRoute} />
+              <Route path='/project_gouda/blauweRoute' component={BlauweRoute} />
           </Switch> 
 
           {/* dit is voor npm start op lokale server
