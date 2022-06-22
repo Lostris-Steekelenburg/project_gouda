@@ -57,20 +57,32 @@ button{
   margin-left: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.button__alle{
+  background-color: whitesmoke;
+  border-color: whitesmoke;
 }
 
 .button__groen{
   background-color: #599130;
+  border-color: #599130;
 }
 
 .button__rood{
   background-color: red;
+  border-color: red;
 }
 
 .button__blauw{
   background-color: blue;
+  border-color: blue;
 }
 
 .button__geel{
   background-color: yellow;
+  border-color: yellow;
 }
+

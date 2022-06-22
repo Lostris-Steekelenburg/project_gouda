@@ -62,12 +62,22 @@ class App extends Component {
     <Router>
       <div className="contentContainer">
       <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Gouda in Beeld & Gedicht</h1></header>
-      <section>
-                 <button><Link to={'/alleRoutes'}>Alle</Link></button>
-                 <button><Link to={'/groeneRoute'}>Groen</Link></button>
-                 <button><Link to={'/geleRoute'}>Gele</Link></button>
-                 <button><Link to={'/rodeRoute'}>Rood</Link></button>
-                 <button><Link to={'/blauweRoute'}>Blauw</Link></button>
+      <section className = "button__section">
+        <a href="./alleRoutes">
+          <button className='button__alle'>Alle</button>
+        </a>
+        <a href="./groeneRoute">
+          <button className='button button__groen'>Groen</button>
+        </a>
+        <a href="./geleRoute">
+          <button className='button__geel'>Geel</button>
+        </a>
+        <a href="./rodeRoute">
+          <button className='button__rood'>Rood</button>
+        </a>
+        <a href="./blauweRoute">
+          <button className='button__blauw'>Blauw</button>
+        </a>
       </section>
       </div>
           <hr />
