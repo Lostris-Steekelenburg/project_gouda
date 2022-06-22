@@ -50,3 +50,27 @@ body{
   text-align: center;
   padding: 0.5rem;
 }
+
+button{
+  display: inline-block;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button__groen{
+  background-color: #599130;
+}
+
+.button__rood{
+  background-color: red;
+}
+
+.button__blauw{
+  background-color: blue;
+}
+
+.button__geel{
+  background-color: yellow;
+}
