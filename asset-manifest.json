@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/project_gouda/static/css/main.688727df.css",
-    "main.js": "/project_gouda/static/js/main.ba59ca04.js",
-    "index.html": "/project_gouda/index.html",
-    "main.688727df.css.map": "/project_gouda/static/css/main.688727df.css.map",
-    "main.ba59ca04.js.map": "/project_gouda/static/js/main.ba59ca04.js.map"
+    "main.css": "/project_gouda/alleRoutes/static/css/main.688727df.css",
+    "main.js": "/project_gouda/alleRoutes/static/js/main.e774e5dc.js",
+    "index.html": "/project_gouda/alleRoutes/index.html",
+    "main.688727df.css.map": "/project_gouda/alleRoutes/static/css/main.688727df.css.map",
+    "main.e774e5dc.js.map": "/project_gouda/alleRoutes/static/js/main.e774e5dc.js.map"
   },
   "entrypoints": [
     "static/css/main.688727df.css",
-    "static/js/main.ba59ca04.js"
+    "static/js/main.e774e5dc.js"
   ]
 }
