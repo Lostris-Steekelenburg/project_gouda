@@ -17,22 +17,23 @@ class App extends Component {
         <a href="/project_gouda/alleRoutes">
           <button className='button__alle'>Alle</button>
         </a>
-        <a href="./groeneRoute">
+        <a href="/project_gouda/groeneRoute">
           <button className='button button__groen'>Groen</button>
         </a>
-        <a href="./geleRoute">
+        <a href="/project_gouda/geleRoute">
           <button className='button__geel'>Geel</button>
         </a>
-        <a href="./rodeRoute">
+        <a href="/project_gouda/rodeRoute">
           <button className='button__rood'>Rood</button>
         </a>
-        <a href="./blauweRoute">
+        <a href="/project_gouda/blauweRoute">
           <button className='button__blauw'>Blauw</button>
         </a>
       </section>
       </div>
           <hr />
           <Switch>
+              <Route path='/project_gouda' component={alleRoutes} />
               <Route path='/project_gouda/alleRoutes' component={alleRoutes} />
               <Route path='/project_gouda/groeneRoute' component={GroeneRoute} />
               <Route path='/project_gouda/geleRoute' component={GeleRoute} />
