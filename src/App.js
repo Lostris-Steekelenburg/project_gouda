@@ -63,7 +63,7 @@ class App extends Component {
       <div className="contentContainer">
       <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Gouda in Beeld & Gedicht</h1></header>
       <section className = "button__section">
-        <a href="./lostris-steekelenburg.github.io/project_gouda/alleRoutes">
+        <a href="./project_gouda">
           <button className='button__alle'>Alle</button>
         </a>
         <a href="./groeneRoute">
@@ -82,7 +82,7 @@ class App extends Component {
       </div>
           <hr />
           <Switch>
-              <Route path='/lostris-steekelenburg.github.io/project_gouda/alleRoutes' component={alleRoutes} />
+              <Route path='/project_gouda' component={alleRoutes} />
               <Route path='/groeneRoute' component={GroeneRoute} />
               <Route path='/geleRoute' component={GeleRoute} />
               <Route path='/rodeRoute' component={RodeRoute} />
