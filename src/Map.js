@@ -21,13 +21,20 @@ let greenIcon = L.icon({
     iconAnchor: [12, 41],
     shadowSize:[50, 60],
     shadowAnchor: [12, 65],
+    popupAnchor: [0, -40]
 });
 
 const baseUrl = "http://206.189.105.69/route/";
 
-// async function getRouteGroen(){
+// console.log(fetch(baseUrl + "green").json());
+
+// async function getRouteGroen() {
 //     const response = await fetch(baseUrl + "green");
 //     const data = await response.json();
+//     return data;
+// }
+//
+// console.log(typeof getRouteGroen())
 //     const FeatureCollection = JSON.parse(data.geo_data);
 //     const features = FeatureCollection.features;
 //     for(let i=0; i<features.length; i++){
@@ -81,7 +88,7 @@ const baseUrl = "http://206.189.105.69/route/";
 // const FeatureCollection = JSON.parse(data.geo_data);
 // const features = FeatureCollection.features;
 
-console.log(WrGroen)
+// console.log(WrGroen)
 
 class myMap extends Component{
     state = {};
@@ -105,7 +112,7 @@ class myMap extends Component{
                     attribution='&copy; <a href="https://www.maptiler.com/copyright/"">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <GeoJSON className="WrGroen" style={this.style_WrGroen} data={routeGroen} pointToLayer={this.pointToLayer.bind(this)}>
+                <GeoJSON className="WrGroen" style={this.style_WrGroen} data={WrGroen} pointToLayer={this.pointToLayer.bind(this)}>
                     onEachFeature: function (feature, layer){
 
                     <Popup>
