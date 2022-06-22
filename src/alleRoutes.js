@@ -5,7 +5,7 @@ import Map from './Map';
 import Button from './button';
 
 
-function App() {
+function alleRoutes() {
   return (
     <div className="contentContainer">
         <Map />
@@ -13,5 +13,5 @@ function App() {
   )
 }
 
-export default App;
+export default alleRoutes;
 

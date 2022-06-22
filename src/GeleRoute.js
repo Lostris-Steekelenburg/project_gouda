@@ -5,7 +5,7 @@ import Map from './Map';
 import Button from './button';
 
 
-function App() {
+function GeleRoute() {
   return (
     <div className="contentContainer">
             <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Gele route</h1></header>
@@ -14,5 +14,5 @@ function App() {
   )
 }
 
-export default App;
+export default GeleRoute;
 

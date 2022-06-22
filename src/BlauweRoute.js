@@ -5,7 +5,7 @@ import Map from './Map';
 import Button from './button';
 
 
-function App() {
+function BlauweRoute() {
   return (
     <div className="contentContainer">
             <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Blauwe route</h1></header>
@@ -14,5 +14,5 @@ function App() {
   )
 }
 
-export default App;
+export default BlauweRoute;
 
