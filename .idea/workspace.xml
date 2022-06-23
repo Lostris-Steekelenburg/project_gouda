@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4fb5478-8b86-4d7b-81d8-bbed05b75e30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/marker-groen.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/marker-groen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/marker-rood.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/marker-rood.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655672080211</updated>
       <workItem from="1655672083745" duration="599000" />
+      <workItem from="1655978446572" duration="1105000" />
     </task>
     <servers />
   </component>

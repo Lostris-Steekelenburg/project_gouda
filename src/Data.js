@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import WrGroen from "./data/Wandelroute_Groen.json"
+import L from "leaflet";
 
 
 
@@ -66,7 +67,7 @@ const Data = () =>{
 
     }, [])
 
-    const style_WrGroen = {
+    const style_WrGreen = {
         color: "#599130",
         weight: 5,
         opacity: 0.8
@@ -90,10 +91,73 @@ const Data = () =>{
         opacity: 0.8
     };
 
+    const greenIcon = L.icon({
+        iconUrl: require('./img/marker-groen.png'),
+        shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+        iconSize: [25,41],
+        iconAnchor: [12, 41],
+        shadowSize:[50, 60],
+        shadowAnchor: [12, 65],
+        popupAnchor: [0, -40]
+    });
+
+    const redIcon = L.icon({
+        iconUrl: require('./img/marker-rood.png'),
+        shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+        iconSize: [25,41],
+        iconAnchor: [12, 41],
+        shadowSize:[50, 60],
+        shadowAnchor: [12, 65],
+        popupAnchor: [0, -40]
+    });
+
+    const yellowIcon = L.icon({
+        iconUrl: require('./img/marker-geel.png'),
+        shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+        iconSize: [25,41],
+        iconAnchor: [12, 41],
+        shadowSize:[50, 60],
+        shadowAnchor: [12, 65],
+        popupAnchor: [0, -40]
+    });
+
+    const blueIcon = L.icon({
+        iconUrl: require('./img/marker-blauw.png'),
+        shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+        iconSize: [25,41],
+        iconAnchor: [12, 41],
+        shadowSize:[50, 60],
+        shadowAnchor: [12, 65],
+        popupAnchor: [0, -40]
+    });
+
+    const pointToLayerGreen = (feature, latlng) => {
+        return L.marker(latlng, {
+            icon: greenIcon
+        });
+    };
+
+    const pointToLayerRed = (feature, latlng) => {
+        return L.marker(latlng, {
+            icon: redIcon
+        });
+    };
+
+    const pointToLayerYellow = (feature, latlng) => {
+        return L.marker(latlng, {
+            icon: yellowIcon
+        });
+    };
+
+    const pointToLayerBlue = (feature, latlng) => {
+        return L.marker(latlng, {
+            icon: blueIcon
+        });
+    };
 
     return(
         <>
-        {routeRed && <GeoJSON style={style_WrRed} data={routeRed}>
+        {routeRed && <GeoJSON style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         <p>test</p>
@@ -101,7 +165,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeGreen && <GeoJSON style={style_WrGroen} data={routeGreen} >
+        {routeGreen && <GeoJSON style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
                 onEachFeature: function (features, feature, layer){
                     <Popup>
                         {/*<h1>{routeGreen.features.feature}</h1>*/}
@@ -111,7 +175,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue}>
+        {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         {/*<h1>{routes.name}</h1>*/}
@@ -121,7 +185,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeYellow && <GeoJSON style={style_WrYellow} data={routeYellow}>
+        {routeYellow && <GeoJSON style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         {/*<h1>{routes.name}</h1>*/}
