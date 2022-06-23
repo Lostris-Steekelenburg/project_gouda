@@ -177,13 +177,15 @@ const Data = () =>{
             </GeoJSON>
         }
         {routeBlue && <GeoJSON cstyle={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
-            {/*{console.log(routeBlue.features.length)}*/}
+            {/*{console.log(routeBlue.features)}*/}
             {routeBlue.features.map((feature) =>
+                // console.log(feature.properties.name);
                 <Popup key={feature.id}>
 
                 {/*<h1>{routes.name}</h1>*/}
                 <p>{feature.properties.name}</p>
-                <p>{feature.properties.location}</p>
+                    {console.log(feature.properties.name)}
+                {/*<p>{feature.type}</p>*/}
                 {/*<p>test</p>*/}
                 </Popup>)}
 
