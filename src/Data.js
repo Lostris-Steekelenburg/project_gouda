@@ -166,7 +166,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeGreen && <GeoJSON cstyle={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
+        {routeGreen && <GeoJSON style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
                 onEachFeature: function (features, feature, layer){
                     <Popup>
                         {/*<h1>{routeGreen.features.feature}</h1>*/}
@@ -176,15 +176,16 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeBlue && <GeoJSON cstyle={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
+        {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
             {/*{console.log(routeBlue.features)}*/}
             {routeBlue.features.map((feature) =>
                 // console.log(feature.properties.name);
                 <Popup key={feature.id}>
+                    {console.log(feature.properties.name)}
 
                 {/*<h1>{routes.name}</h1>*/}
                 <p>{feature.properties.name}</p>
-                    {console.log(feature.properties.name)}
+
                 {/*<p>{feature.type}</p>*/}
                 {/*<p>test</p>*/}
                 </Popup>)}
