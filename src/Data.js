@@ -5,9 +5,6 @@ import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import WrGroen from "./data/Wandelroute_Groen.json"
 import L from "leaflet";
 
-
-
-
 const Data = () =>{
     var [routeRed, setRouteRed] = useState(null)
     var [routeGreen, setRouteGreen] = useState(null)
@@ -155,50 +152,41 @@ const Data = () =>{
         });
     };
 
-
     return(
         <>
         {routeRed && <GeoJSON style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        <p>test</p>
-                    </Popup>
-                }
+            {routeRed.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>Naam marker</h2>
+                    <p>Locatie marker</p>
+                </Popup>)})
+            }
             </GeoJSON>
         }
         {routeGreen && <GeoJSON style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
-                onEachFeature: function (features, feature, layer){
-                    <Popup>
-                        {/*<h1>{routeGreen.features.feature}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
+            {routeGreen.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>{routeGreen.features[0].properties.name}</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
                 }
             </GeoJSON>
         }
         {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
-            {/*{console.log(routeBlue.features)}*/}
             {routeBlue.features.map((feature) =>
-                // console.log(feature.properties.name);
                 <Popup key={feature.id}>
-                    {console.log(feature.properties.name)}
-
-                {/*<h1>{routes.name}</h1>*/}
-                <p>{feature.properties.name}</p>
-
-                {/*<p>{feature.type}</p>*/}
-                {/*<p>test</p>*/}
+                <h2>{feature.properties.name}</h2>
+                <p>Locatie marker</p>
                 </Popup>)}
 
             </GeoJSON>
         }
         {routeYellow && <GeoJSON style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        {/*<h1>{routes.name}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
+            {routeYellow.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>Naam marker</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
                 }
             </GeoJSON>
         }
