@@ -5,9 +5,6 @@ import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import WrGroen from "./data/Wandelroute_Groen.json"
 import L from "leaflet";
 
-
-
-
 const Data = () =>{
     var [routeRed, setRouteRed] = useState(null)
     var [routeGreen, setRouteGreen] = useState(null)
@@ -88,7 +85,7 @@ const Data = () =>{
     const style_WrYellow = {
         color: "#fecf23",
         weight: 5,
-        opacity: 0.8
+        opacity: 0.8,
     };
 
     const greenIcon = L.icon({
@@ -151,47 +148,45 @@ const Data = () =>{
 
     const pointToLayerBlue = (feature, latlng) => {
         return L.marker(latlng, {
-            icon: blueIcon
+            icon: blueIcon,
         });
     };
 
     return(
         <>
-        {routeRed && <GeoJSON className="routeRood"style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        <p>test</p>
-                    </Popup>
+        {routeRed && <GeoJSON style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
+            {routeRed.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>Naam marker</h2>
+                    <p>Locatie marker</p>
+                </Popup>)})
+            }
+            </GeoJSON>
+        }
+        {routeGreen && <GeoJSON style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
+            {routeGreen.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>{routeGreen.features[0].properties.name}</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
                 }
             </GeoJSON>
         }
-        {routeGreen && <GeoJSON className="routeGroen"style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
-                onEachFeature: function (features, feature, layer){
-                    <Popup>
-                        {/*<h1>{routeGreen.features.feature}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
-                }
+        {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
+            {routeBlue.features.map((feature) =>
+                <Popup key={feature.id}>
+                <h2>{feature.properties.name}</h2>
+                <p>Locatie marker</p>
+                </Popup>)}
+
             </GeoJSON>
         }
-        {routeBlue && <GeoJSON className="routeBlauw"style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        {/*<h1>{routes.name}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
-                }
-            </GeoJSON>
-        }
-        {routeYellow && <GeoJSON className="routeGeel"style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        {/*<h1>{routes.name}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
+        {routeYellow && <GeoJSON style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
+            {routeYellow.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>Naam marker</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
                 }
             </GeoJSON>
         }
