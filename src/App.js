@@ -6,6 +6,7 @@ import GeleRoute from './GeleRoute/GeleRoute';
 import RodeRoute from './RodeRoute/RodeRoute';
 import BlauweRoute from './BlauweRoute/BlauweRoute';
 import Data from "./Data";
+import Map from "./Map";
 
 class App extends Component {
   render() {
@@ -41,6 +42,13 @@ class App extends Component {
                   <Route path='/project_gouda/rodeRoute' component={RodeRoute} />
                   <Route path='/project_gouda/blauweRoute' component={BlauweRoute} />
               </Switch>
+
+            <section className = "map">
+                <Map>
+                    <Data/>
+                </Map>
+            </section>
+
         </Router>
     );
   }
