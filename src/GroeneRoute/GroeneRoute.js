@@ -1,17 +1,16 @@
-import "./App.css";
+import "../App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import React from 'react';
-import RodeMap from './RodeMap';
-import Button from './button';
+import GroeneMap from './GroeneMap';
 
 
-function RodeRoute() {
+function GroeneRoute() {
   return (
     <div className="contentContainer">
-            <RodeMap />
+            <GroeneMap />
       </div>
   )
 }
 
-export default RodeRoute;
+export default GroeneRoute;
 

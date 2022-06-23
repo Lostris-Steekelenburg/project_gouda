@@ -1,17 +1,17 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import React from 'react';
-import BlauweMap from './BlauweMap';
+import Map from './Map';
 import Button from './button';
 
 
-function BlauweRoute() {
+function Home() {
   return (
     <div className="contentContainer">
-            <BlauweMap />
+        <Map />
       </div>
   )
 }
 
-export default BlauweRoute;
+export default Home;
 

@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import L, { icon } from 'leaflet'
-import Data from "./Data"
 import GroeneRouteLaden from './GroeneRouteLaden';
 
 

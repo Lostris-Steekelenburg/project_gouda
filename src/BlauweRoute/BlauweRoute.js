@@ -1,17 +1,16 @@
-import "./App.css";
+import "../App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import React from 'react';
-import GeleMap from './GeleMap';
-import Button from './button';
+import BlauweMap from './BlauweMap';
 
 
-function GeleRoute() {
+function BlauweRoute() {
   return (
     <div className="contentContainer">
-        <GeleMap />
+            <BlauweMap />
       </div>
   )
 }
 
-export default GeleRoute;
+export default BlauweRoute;
 

@@ -2,47 +2,43 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
-import WrGroen from "./data/Wandelroute_Groen.json"
 import L from "leaflet";
 
 
 
 
-const BlauweRouteLaden = () =>{
-    var [routeBlue, setRouteBlue] = useState(null)
+const GeleRouteLaden = () =>{
+    var [routeYellow, setRouteYellow] = useState(null)
     const baseUrl = "http://206.189.105.69/route/";
 
     useEffect(() => {
 
 
-        function getBlue(){
-            fetch(baseUrl + "blue")
+        function getYellow(){
+            fetch(baseUrl + "yellow")
                 .then(res => {
                     return res.json();
                 })
                 .then(data => {
                     data = JSON.parse(data.geo_data);
-                    setRouteBlue(data);
+                    setRouteYellow(data);
                 })
         }
 
-
-
-        getBlue();
+        getYellow();
 
     }, [])
 
-
-
-    const style_WrBlue = {
-        color: "#1ca7e2",
+ 
+    const style_WrYellow = {
+        color: "#fecf23",
         weight: 5,
         opacity: 0.8
     };
 
-
-    const blueIcon = L.icon({
-        iconUrl: require('./img/marker-blauw.png'),
+   
+    const yellowIcon = L.icon({
+        iconUrl: require('../img/marker-geel.png'),
         shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
         iconSize: [25,41],
         iconAnchor: [12, 41],
@@ -52,15 +48,16 @@ const BlauweRouteLaden = () =>{
     });
 
 
-    const pointToLayerBlue = (feature, latlng) => {
+    const pointToLayerYellow = (feature, latlng) => {
         return L.marker(latlng, {
-            icon: blueIcon
+            icon: yellowIcon
         });
     };
 
+
     return(
         <>
-        {routeBlue && <GeoJSON className="routeBlauw"style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
+        {routeYellow && <GeoJSON className="routeGeel"style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         {/*<h1>{routes.name}</h1>*/}
@@ -74,4 +71,4 @@ const BlauweRouteLaden = () =>{
     )
 };
 
-export default BlauweRouteLaden;
+export default GeleRouteLaden;

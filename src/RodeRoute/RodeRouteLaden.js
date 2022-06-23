@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
-import WrGroen from "./data/Wandelroute_Groen.json"
 import L from "leaflet";
 
 
@@ -45,7 +44,7 @@ const RodeRouteLaden = () =>{
 
 
     const redIcon = L.icon({
-        iconUrl: require('./img/marker-rood.png'),
+        iconUrl: require('../img/marker-rood.png'),
         shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
         iconSize: [25,41],
         iconAnchor: [12, 41],

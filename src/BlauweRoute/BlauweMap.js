@@ -2,8 +2,7 @@ import React, {Component} from "react";
 import { Map, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import L, { icon } from 'leaflet'
-import Data from "./Data"
-import GeleRouteLaden from './GeleRouteLaden';
+import BlauweRouteLaden from './BlauweRouteLaden';
 
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -19,20 +18,20 @@ L.Icon.Default.mergeOptions({
     popupAnchor: [0, -40]
 });
 
-class GeleMap extends Component{
+class BlauweMap extends Component{
     state = {};
 
     render(){
         return(
-            <Map className="map" center={[52.0105205, 4.7104633]} zoom={15} scrollWheelZoom={true}>
+            <Map className="map" center={[52.0080000, 4.7057633]} zoom={15} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.maptiler.com/copyright/"">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <GeleRouteLaden />
+                <BlauweRouteLaden />
             </Map>
         );
     }
 }
 
-export default GeleMap;
+export default BlauweMap;

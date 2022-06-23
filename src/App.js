@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import alleRoutes from './Map';
-import GroeneRoute from './GroeneRoute';
-import GeleRoute from './GeleRoute';
-import RodeRoute from './RodeRoute';
-import BlauweRoute from './BlauweRoute';
-import Map from './Map';
-import Data from './Data'
-
+import GroeneRoute from './GroeneRoute/GroeneRoute';
+import GeleRoute from './GeleRoute/GeleRoute';
+import RodeRoute from './RodeRoute/RodeRoute';
+import BlauweRoute from './BlauweRoute/BlauweRoute';
 
 class App extends Component {
   render() {
@@ -15,25 +12,7 @@ class App extends Component {
     <Router>
       <div className="contentContainer">
       <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Gouda in Beeld & Gedicht</h1></header>
-      {/* Voor de github */}
-      {/* <section className = "button__section"> 
-        <a href="./alleRoutes">
-          <button className='button__alle'>Alle</button>
-        </a>
-        <a href="./groeneRoute">
-          <button className='button button__groen'>Groen</button>
-        </a>
-        <a href="./geleRoute">
-          <button className='button__geel'>Geel</button>
-        </a>
-        <a href="./rodeRoute">
-          <button className='button__rood'>Rood</button>
-        </a>
-        <a href="./blauweRoute">
-          <button className='button__blauw'>Blauw</button>
-        </a>
-      </section> */}
-            {/* Voor het lokaal testen */}
+
       <section className = "button__section">
         <a href="/project_gouda/alleRoutes">
           <button className='button__alle'>Alle</button>
