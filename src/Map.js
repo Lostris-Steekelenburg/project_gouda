@@ -17,15 +17,8 @@ L.Icon.Default.mergeOptions({
     popupAnchor: [0, -40]
 });
 
-
-let greenIcon = L.icon({
-    iconUrl: require('./img/marker-groen.png'),
-});
-
 class myMap extends Component{
     state = {};
-
-
 
     render(){
         return(
@@ -39,6 +32,5 @@ class myMap extends Component{
         );
     }
 }
-
 
 export default myMap;
