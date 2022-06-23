@@ -8,7 +8,6 @@ import Button from './button';
 function RodeRoute() {
   return (
     <div className="contentContainer">
-            <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Groene route</h1></header>
             <RodeMap />
       </div>
   )

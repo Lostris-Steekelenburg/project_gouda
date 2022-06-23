@@ -1,15 +1,14 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import React from 'react';
-import Map from './Map';
+import BlauweMap from './BlauweMap';
 import Button from './button';
 
 
 function BlauweRoute() {
   return (
     <div className="contentContainer">
-            <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Blauwe route</h1></header>
-        <Map />
+            <BlauweMap />
       </div>
   )
 }
