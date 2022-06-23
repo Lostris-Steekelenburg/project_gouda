@@ -157,7 +157,7 @@ const Data = () =>{
 
     return(
         <>
-        {routeRed && <GeoJSON style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
+        {routeRed && <GeoJSON className="routeRood"style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         <p>test</p>
@@ -165,7 +165,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeGreen && <GeoJSON style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
+        {routeGreen && <GeoJSON className="routeGroen"style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
                 onEachFeature: function (features, feature, layer){
                     <Popup>
                         {/*<h1>{routeGreen.features.feature}</h1>*/}
@@ -175,7 +175,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
+        {routeBlue && <GeoJSON className="routeBlauw"style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         {/*<h1>{routes.name}</h1>*/}
@@ -185,7 +185,7 @@ const Data = () =>{
                 }
             </GeoJSON>
         }
-        {routeYellow && <GeoJSON style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
+        {routeYellow && <GeoJSON className="routeGeel"style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
                 onEachFeature: function (feature, layer){
                     <Popup>
                         {/*<h1>{routes.name}</h1>*/}
@@ -197,6 +197,6 @@ const Data = () =>{
         }
         </>
     )
-}
+};
 
 export default Data;
