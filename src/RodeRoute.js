@@ -1,0 +1,18 @@
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React from 'react';
+import Map from './Map';
+import Button from './button';
+
+
+function RodeRoute() {
+  return (
+    <div className="contentContainer">
+            <header className="contentContainer__header"><h1 className="contentContainer__header__h1">Rode route</h1></header>
+        <Map />
+      </div>
+  )
+}
+
+export default RodeRoute;
+
