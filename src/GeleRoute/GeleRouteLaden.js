@@ -57,14 +57,13 @@ const GeleRouteLaden = () =>{
 
     return(
         <>
-        {routeYellow && <GeoJSON className="routeGeel"style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        {/*<h1>{routes.name}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
-                }
+        {routeYellow && <GeoJSON className="routeGeel" style={style_WrYellow} data={routeYellow} pointToLayer={pointToLayerYellow.bind(this)}>
+            {routeYellow.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>Naam marker</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
+            }
             </GeoJSON>
         }
         </>

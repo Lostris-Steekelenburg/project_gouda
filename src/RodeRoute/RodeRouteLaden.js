@@ -63,12 +63,13 @@ const RodeRouteLaden = () =>{
 
     return(
         <>
-        {routeRed && <GeoJSON className="routeRood"style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        <p>test</p>
-                    </Popup>
-                }
+        {routeRed && <GeoJSON className="routeRood" style={style_WrRed} data={routeRed} pointToLayer={pointToLayerRed.bind(this)}>
+            {routeRed.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>Naam marker</h2>
+                    <p>Locatie marker</p>
+                </Popup>)})
+            }
             </GeoJSON>
         }</>
     )

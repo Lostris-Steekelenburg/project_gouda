@@ -59,14 +59,12 @@ const BlauweRouteLaden = () =>{
 
     return(
         <>
-        {routeBlue && <GeoJSON className="routeBlauw"style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
-                onEachFeature: function (feature, layer){
-                    <Popup>
-                        {/*<h1>{routes.name}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
-                }
+        {routeBlue && <GeoJSON className="routeBlauw" style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
+            {routeBlue.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>{feature.properties.name}</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
             </GeoJSON>
         }
         </>

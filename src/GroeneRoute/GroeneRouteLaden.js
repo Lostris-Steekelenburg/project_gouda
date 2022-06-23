@@ -55,14 +55,13 @@ const GroeneRouteLaden = () =>{
 
     return(
         <>
-        {routeGreen && <GeoJSON className="routeGroen"style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
-                onEachFeature: function (features, feature, layer){
-                    <Popup>
-                        {/*<h1>{routeGreen.features.feature}</h1>*/}
-                        {/*<p>{routes.location}</p>*/}
-                        <p>test</p>
-                    </Popup>
-                }
+        {routeGreen && <GeoJSON className="routeGroen" style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
+            {routeGreen.features.map((feature) =>
+                <Popup key={feature.id}>
+                    <h2>{routeGreen.features[0].properties.name}</h2>
+                    <p>Locatie marker</p>
+                </Popup>)}
+            }
             </GeoJSON>
         }
 
