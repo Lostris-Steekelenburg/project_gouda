@@ -159,8 +159,7 @@ const Data = () =>{
                 <Popup key={feature.id}>
                     <h2>Naam marker</h2>
                     <p>Locatie marker</p>
-                </Popup>)})
-            }
+                </Popup>)};
             </GeoJSON>
         }
         {routeGreen && <GeoJSON style={style_WrGreen} data={routeGreen} pointToLayer={pointToLayerGreen.bind(this)}>
@@ -169,7 +168,6 @@ const Data = () =>{
                     <h2>{routeGreen.features[0].properties.name}</h2>
                     <p>Locatie marker</p>
                 </Popup>)}
-                }
             </GeoJSON>
         }
         {routeBlue && <GeoJSON style={style_WrBlue} data={routeBlue} pointToLayer={pointToLayerBlue.bind(this)}>
@@ -187,7 +185,6 @@ const Data = () =>{
                     <h2>Naam marker</h2>
                     <p>Locatie marker</p>
                 </Popup>)}
-                }
             </GeoJSON>
         }
         </>

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import alleRoutes from './Map';
+import AlleRoutes from './alleRoutes/alleRoutes';
 import GroeneRoute from './GroeneRoute/GroeneRoute';
 import GeleRoute from './GeleRoute/GeleRoute';
 import RodeRoute from './RodeRoute/RodeRoute';
 import BlauweRoute from './BlauweRoute/BlauweRoute';
-import Data from "./Data";
-import Map from "./Map";
 
 class App extends Component {
   render() {
@@ -36,19 +34,12 @@ class App extends Component {
           </div>
               <hr />
               <Switch>
-                  <Route path='/project_gouda/alleRoutes' component={alleRoutes} />
+                  <Route path='/project_gouda/alleRoutes' component={AlleRoutes} />
                   <Route path='/project_gouda/groeneRoute' component={GroeneRoute} />
                   <Route path='/project_gouda/geleRoute' component={GeleRoute} />
                   <Route path='/project_gouda/rodeRoute' component={RodeRoute} />
                   <Route path='/project_gouda/blauweRoute' component={BlauweRoute} />
               </Switch>
-
-            <section className = "map">
-                <Map>
-                    <Data/>
-                </Map>
-            </section>
-
         </Router>
     );
   }

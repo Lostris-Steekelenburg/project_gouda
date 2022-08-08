@@ -28,8 +28,39 @@ body{
 
   /*MAP*/
 .map{
-  width: 100vw;
+  width: 80vw;
   height: 90vh;
+  float: left;
+}
+
+.contentSection{
+  width: 19vw;
+  float: right;
+}
+
+.contentSection_h1{
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #c70000;
+}
+
+.contentSection_p{
+  padding: 1rem;
+  font-size: 1rem;
+  margin-right: 3rem;
+}
+
+  .Collapsible{
+    background-color: #c70000;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #EEEEE2;
+  }
+
+.contentSection_dropdown{
+  width: 200;
+  border: '1px solid #ddd';
+  background: 'green'
 }
 
 .contentContainer__header{
@@ -41,6 +72,11 @@ body{
   size: 3rem;
   padding: 1.5rem;
   color: #f2f0eb;
+}
+
+.contentSection_p{
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .contentContainer__footer{
