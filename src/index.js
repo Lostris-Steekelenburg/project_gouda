@@ -6,5 +6,6 @@ import AlleRoutes from './alleRoutes/alleRoutes';
 ReactDom.render((
   <BrowserRouter>
     <App />
+    <AlleRoutes />
   </BrowserRouter>
 ), document.getElementById('root'))

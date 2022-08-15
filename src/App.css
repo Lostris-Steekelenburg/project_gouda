@@ -122,3 +122,28 @@ button{
   border-color: yellow;
 }
 
+@media screen and (max-width: 700px) {
+  .map{
+    width: 100vw;
+    height: 70vh;
+    float: top;
+  }
+  
+  .contentSection{
+    width: 100vw;
+    float: bottom;
+  }
+
+  .map2{
+    display: none;
+  }
+
+  .contentSection_h1{
+    font-size: 3rem;
+  }
+  
+  .contentSection_p{
+    font-size: 2rem;
+  }
+}
+
