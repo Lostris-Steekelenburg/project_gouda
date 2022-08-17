@@ -54,7 +54,7 @@ const GroeneRouteLaden = () =>{
             {routeGreen.features.map((feature) =>
                 <Popup key={feature.id}>
                     <h2>{routeGreen.features[0].properties.name}</h2>
-                    <p>Locatie marker</p>
+                    <p>{routeGreen.features[0].properties.location}</p>
                 </Popup>)}
             
             </GeoJSON>
