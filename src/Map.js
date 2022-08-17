@@ -31,7 +31,6 @@ class myMap extends Component{
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 <Data />
-                {/*<GeoJSON data={RouteGroen}></GeoJSON>*/}
             </Map>
         );
     }
